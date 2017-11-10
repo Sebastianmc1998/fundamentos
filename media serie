@@ -1,0 +1,36 @@
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+int media_serie(int N);
+void main()
+{
+	int N,media;
+	cout<<"ingrese el valor para N:";
+	cin>>N;
+	media=media_serie(N);
+	cout<<"la media de la serie es:"<<N<<endl;
+	getch();
+}
+
+int media_serie(int N)
+{
+	int j=0,suma=0,r,s,m;
+	for(int i=2; i<=N; i=i+2)
+	{
+		if(i>9)
+		{
+			r=i%10;
+			s=(r*10)+(i/10);
+		}
+		else
+			s=i;
+		suma=suma+s;
+		j=j+1;
+	}
+	m=suma/j;
+	return m;
+}
