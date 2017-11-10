@@ -1,0 +1,77 @@
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define max 100
+using namespace std;
+int mayus(char frase[]);
+
+int main(){
+char frase[max];
+cout<<"ingrese una frase: ";
+cin.getline(frase, max, '\n');
+cout<<"existen "<<mayus(frase)<<" numero mayusculas";
+
+getch();
+return 0;
+}
+
+
+int mayus(char frase[]){
+int mayuscula=0;
+    for(int i=0; i<max; i++){
+    if (frase[i]>='A' && frase[i]<='Z')
+        mayuscula=mayuscula+1;
+    }
+
+return mayuscula;
+
+}
+
+2017-11-10 10:12 GMT-04:00 Kengo Nakamura <kengonc98@gmail.com>:
+
+    #include "stdafx.h"
+    #include <iostream>
+    #include "conio.h"
+    #define max 100
+    using namespace std;
+    //declaramos las funciones:
+    bool numero_curioso(int num);
+
+    int main()
+    {
+        int num;
+        cout<<"ingrese un numero para saber si es curioso: ";
+        cin>>num;
+        if (numero_curioso(num))                        //llamamos a la funcion num_curioso
+            cout<<"si es un numero curioso";
+        else
+            cout<<"no es un numero curioso";
+
+        getch();
+        return 0;
+    }
+
+    bool numero_curioso(int num){
+    int a,n,b,suma=0;
+    bool yes=false;
+    n=num;
+    while (num!=0){
+         a=num%10;
+         b=a;
+         while(b>1){
+         a=a*(b-1);
+         b=b-1;
+         }
+    suma=suma+a;
+    num=num/10;
+    }
+    if(n==suma){
+        yes=true;
+        return yes;
+        }
+    else
+        return yes;
+    }
+
