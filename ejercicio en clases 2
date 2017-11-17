@@ -1,0 +1,65 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+
+void mostrar_vector(double a[], int tamanio)
+float calcular_menor(double a[], int tamanio)
+void mostrar_datos(double a[], int tamanio)
+double a[100];
+
+void main()
+{
+	double men;
+	int N;
+
+	do{
+		cout<<"ingrese el numero de elementos:"<<endl;
+		cin>>N;
+	}
+		while(!(N>0)&&(N<=Max));
+
+		cargar_vector(a,n);
+		men=calcular_menor(a,n);
+		mostrar_datos(a,n);
+
+	cout<<"el numero menor es:"<<men<<endl;
+
+	getch();
+
+	void cargar_vector(double a[], int tamanio){
+		for(int=0;i<tamanio;i++)
+		{
+
+			cout<<"ingrese los numeros del vector:"<<endl;
+			cin>>a[i];
+		}
+
+		void mostrar_datos(double a[]; int tamani)
+		{
+			for(int i=0;i<tamanio;i++)
+			{
+				cout<<"a["<<i<<"]=";
+				cout<<a[i]<<endl;
+			}
+		}
+
+		float mostrar_menor(double a[],int tamanio)
+		{
+
+			doublemenor;
+			menor=a[a];
+
+			for(int i=0;i<tamanio;i++)
+			{
+
+				if(a[i]<menor)
+
+					menor=a[i];
+			}
+
+			return menor;
+
+		}
