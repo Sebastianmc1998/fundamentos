@@ -1,0 +1,45 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar_vector(double a[], int tamanio)
+float valor_maximo(double a[], int tamanio)
+void mostrar_datos(double a[], int tamanio)
+void main(){
+    double a[MAX], max;
+    int n;
+    do{
+        cout<<"ingrese el numero de elemntos que desee:"<<endl;
+        cin>>n;
+    }
+    while !((n>0)&&(n<=MAX));
+    cargar_vector (a,n)
+        max=valor_maximo(a,n);
+    mostrar_datos (a,n)
+        cout<<"el numero mayor es:"<<max<<endl;
+    getch();
+}
+void cargar_vector(double a[], int tamanio){
+    for (int i=0; i<tamanio; i++){
+        cout<<"ingrese los numeros del vector:"<<endl;
+        cin>>a[i]
+    }
+}
+void mostrar_datos(double a[], int tamanio){
+    for (int i=0; i<tamanio; i++){
+        cout<<"a["<<i<<"]=";
+        cout<<a[i]<<endl;
+    }
+}
+float valor_maximo (double a[], int tamanio){
+    double max;
+    max=a[0];
+    for (int i=0; i<tamanio; i++){
+        if (a[i]>max)
+            max=a[i]
+    }
+    return max;
+}
